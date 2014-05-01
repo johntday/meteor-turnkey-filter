@@ -9,11 +9,11 @@ Package.on_use(function(api) {
   );
 
   api.add_files(
-	  ['filter-collections-client.js'],
+	  ['client.js'],
 	  ['client']
   );
   api.add_files(
-	  ['filter-collections-server.js'],
+	  ['server.js'],
 	  ['server']
   );
 });
