@@ -1,0 +1,9 @@
+{
+	"name": "turnkey-filter",
+	"description": "Meteor package for turnkey solution to sorting, paging, and filtering Meteor collections",
+	"homepage": "https://github.com/johntday/meteor-turnkey-filter",
+	"author": "John T Day (http://johntday@gmail.com)",
+	"version": "0.1.0",
+	"git": "https://github.com/johntday/meteor-turnkey-filter.git",
+	"packages": {}
+}
