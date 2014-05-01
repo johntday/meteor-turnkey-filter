@@ -1,3 +1,5 @@
 .meteor/local
 .meteor/meteorite
 _README.md
+_client.js
+_server.js
