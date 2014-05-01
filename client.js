@@ -662,14 +662,18 @@ Meteor.FilterCollections = function (collection, settings) {
       return;
     };
 
-    /** Template cleanup. **/
-    Template[_template].destroyed = function () {
-      _subs.results.stop();
-      _subs.count.stop();
+	  /** Template cleanup. **/
+	  Template[_template].destroyed = function () {
+		  if (_subs && _subs.results && _.isFunction( _subs.results.stop )) {
+			  _subs.results.stop();
 
-      if (_.isFunction(_callbacks.templateDestroyed))
-        _callbacks.templateDestroyed(this);
-    };
+			  if ( _subs.count && _.isFunction(_subs.count.stop) )
+				  _subs.count.stop();
+
+			  if (_.isFunction(_callbacks.templateDestroyed))
+				  _callbacks.templateDestroyed(this);
+		  }
+	  };
 
     Template[_template].helpers({
       fcResults: function(){
